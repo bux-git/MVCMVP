@@ -1,1 +1,1 @@
-include ':MVC'
+include ':MVC', ':MVP'
