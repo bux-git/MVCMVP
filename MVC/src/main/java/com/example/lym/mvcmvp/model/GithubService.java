@@ -1,5 +1,7 @@
 package com.example.lym.mvcmvp.model;
 
+import com.example.lym.mvcmvp.constant.Constant;
+
 import java.util.List;
 
 import retrofit2.Retrofit;
@@ -32,7 +34,7 @@ public interface GithubService {
 
         public static GithubService create(){
             Retrofit retrofit=new Retrofit.Builder()
-                    .baseUrl("https://api.github.com/")
+                    .baseUrl(Constant.BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                     .build();

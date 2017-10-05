@@ -13,6 +13,8 @@ import com.example.lym.mvcmvp.model.Repo;
 
 public class FavoReposHelper {
 
+    final static String FILE_NAME="FavoRepos";
+
     static FavoReposHelper sHelper;
     String mPrefKey = "favo_repos";
     String favoReposJSON = "";
@@ -20,7 +22,7 @@ public class FavoReposHelper {
 
     private FavoReposHelper(Context context){
         mContext = context;
-        favoReposJSON = PreferenceManager.getString(context, mPrefKey, "");
+        favoReposJSON = PreferenceManager.getString(FILE_NAME, mPrefKey, "");
     }
 
     public static  void init(Application context){
@@ -49,6 +51,6 @@ public class FavoReposHelper {
     }
 
     private void saveToPref() {
-        PreferenceManager.putString(mContext, mPrefKey, favoReposJSON);
+        PreferenceManager.putString(FILE_NAME, mPrefKey, favoReposJSON);
     }
 }

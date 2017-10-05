@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/very_light_grey"
-    tools:context=".view.MainActivity">
+    android:background="@color/very_light_grey">
 
     <ImageView
         android:layout_width="110dp"
@@ -61,7 +60,7 @@
                 android:imeOptions="actionSearch"
                 android:inputType="text"
                 android:textColor="@color/white"
-                android:theme="@style/LightEditText"/>
+                style="@style/LightEditText"/>
 
         </RelativeLayout>
 

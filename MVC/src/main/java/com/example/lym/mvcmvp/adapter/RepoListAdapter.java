@@ -2,6 +2,7 @@ package com.example.lym.mvcmvp.adapter;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import com.example.lym.mvcmvp.App;
 import com.example.lym.mvcmvp.R;
 import com.example.lym.mvcmvp.model.Repo;
 import com.example.lym.mvcmvp.util.FavoReposHelper;
+import com.example.lym.mvcmvp.view.UserRepoActivity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -170,9 +172,9 @@ public class RepoListAdapter extends RecyclerView.Adapter<RepoListAdapter.ViewHo
         }
 
         private void openUserRepoActivity(String name){
-           /* Intent intent = new Intent(mContext, UserRepoActivity.class) ;
+            Intent intent = new Intent(mContext, UserRepoActivity.class) ;
             intent.putExtra("username",name);
-            mContext.startActivity(intent);*/
+            mContext.startActivity(intent);
         }
     }
 }
